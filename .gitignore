@@ -30,12 +30,12 @@ bin/
 /Cryptanalyst.iml
 /.idea/
 
-# Default ignored files
+# Default ignored app.files
 /shelf/
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-# Datasource local storage ignored files
+# Datasource local storage ignored app.files
 /dataSources/
 /dataSources.local.xml
 # my ignored

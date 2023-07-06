@@ -1,3 +1,5 @@
+package app;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -61,7 +63,7 @@ public class FileOpenSaveAndConvert {
         }
     }
 
-    private byte[] openFile() {
+    public byte[] openFile() {
         try (RandomAccessFile file = new RandomAccessFile(fileNameOpen, "rw");
              FileChannel channel = file.getChannel();
              var baos = new ByteArrayOutputStream()) {
