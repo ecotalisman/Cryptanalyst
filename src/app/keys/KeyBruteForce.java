@@ -42,14 +42,14 @@ public class KeyBruteForce extends Key {
         keyHashMap.put("  ", new KeyOne());
         keyHashMap.put("   ", new KeyTwo());
         keyHashMap.put("    ", new KeyThree());
-        Key key;
+
         if (dataStr.contains("    ")) {
-            key = keyHashMap.get("    ");
+            chosenKey = keyHashMap.get("    ");
         } else if (dataStr.contains("   ")) {
-            key = keyHashMap.get("   ");
+            chosenKey = keyHashMap.get("   ");
         } else {
-            key = keyHashMap.get("  ");
+            chosenKey = keyHashMap.get("  ");
         }
-        return key;
+        return chosenKey;
     }
 }

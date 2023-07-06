@@ -12,7 +12,6 @@ import static app.menu.MenuConstants.*;
 public class MenuOption {
 
     public void runApp() {
-        System.out.println("Choose menu key:");
     }
     public String openFileOption() {
         Scanner scannerPathOpen = new Scanner(System.in);
