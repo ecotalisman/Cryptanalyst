@@ -18,6 +18,10 @@ public class FileOpenSaveAndConvert {
 
     }
 
+    public FileOpenSaveAndConvert(String fileNameOpen) {
+        this.fileNameOpen = fileNameOpen;
+    }
+
     public FileOpenSaveAndConvert(String fileName, String fileNameSave) {
         this.fileNameOpen = fileName;
         this.fileNameSave = fileNameSave;

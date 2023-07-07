@@ -2,35 +2,33 @@ package app.keys;
 
 import app.FileOpenSaveAndConvert;
 import app.menu.MenuOption;
-import app.menu.MenuOptionDecrypt;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
 public class KeyBruteForce extends Key {
     private Key chosenKey;
+    private String openFileName;
 
     @Override
     public void key() {
-        new MenuOption().openFileOption();
-        FileOpenSaveAndConvert fileOpenSaveAndConvert = new FileOpenSaveAndConvert();
+        this.openFileName = new MenuOption().openFileOption();
+        var fileOpenSaveAndConvert = new FileOpenSaveAndConvert(openFileName);
         byte[] data = fileOpenSaveAndConvert.openFile();
         this.chosenKey = chosenKey(data);
     }
 
+    public String getOpenFileName() {
+        return openFileName;
+    }
+
     @Override
     public int encryptKey() {
-        if (this.chosenKey == null) {
-            throw new IllegalStateException("Key Number has not been chosen yet");
-        }
         return this.chosenKey.encryptKey();
     }
 
     @Override
     public String numberSpace() {
-        if (this.chosenKey == null) {
-            throw new IllegalStateException("Key Space has not been chosen yet");
-        }
         return this.chosenKey.numberSpace();
     }
 
@@ -44,12 +42,12 @@ public class KeyBruteForce extends Key {
         keyHashMap.put("    ", new KeyThree());
 
         if (dataStr.contains("    ")) {
-            chosenKey = keyHashMap.get("    ");
+            this.chosenKey = keyHashMap.get("    ");
         } else if (dataStr.contains("   ")) {
-            chosenKey = keyHashMap.get("   ");
+            this.chosenKey = keyHashMap.get("   ");
         } else {
-            chosenKey = keyHashMap.get("  ");
+            this.chosenKey = keyHashMap.get("  ");
         }
-        return chosenKey;
+        return this.chosenKey;
     }
 }

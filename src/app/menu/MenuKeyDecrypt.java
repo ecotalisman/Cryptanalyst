@@ -16,6 +16,7 @@ public class MenuKeyDecrypt extends MenuKeyEncrypt {
     @Override
     public Key runKey() {
         Key key = null;
+        var keyBruteForce = new KeyBruteForce();
         while (isRunning) {
             System.out.print("\n" + ENTER_KEY_CONSOLE_Decrypt);
             String userInput = scanner.nextLine();
@@ -23,6 +24,10 @@ public class MenuKeyDecrypt extends MenuKeyEncrypt {
             if (key instanceof IncorrectKey) {
                 key.key();
                 continue;
+            } else if (key instanceof KeyBruteForce) {
+                key = keyBruteForce;
+                keyBruteForce.key();
+                break;
             }
             break;
         }
