@@ -1,3 +1,5 @@
+package app;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -7,18 +9,22 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class FileConvertToChars {
+public class FileOpenSaveAndConvert {
 
     private String fileNameOpen;
     private String fileNameSave;
 
-    public FileConvertToChars(String fileName, String fileNameSave) {
-        this.fileNameOpen = fileName;
-        this.fileNameSave = fileNameSave;
+    public FileOpenSaveAndConvert() {
+
     }
 
-    public FileConvertToChars() {
+    public FileOpenSaveAndConvert(String fileNameOpen) {
+        this.fileNameOpen = fileNameOpen;
+    }
 
+    public FileOpenSaveAndConvert(String fileName, String fileNameSave) {
+        this.fileNameOpen = fileName;
+        this.fileNameSave = fileNameSave;
     }
 
     public char[] bytesToChars() {
@@ -61,7 +67,7 @@ public class FileConvertToChars {
         }
     }
 
-    private byte[] openFile() {
+    public byte[] openFile() {
         try (RandomAccessFile file = new RandomAccessFile(fileNameOpen, "rw");
              FileChannel channel = file.getChannel();
              var baos = new ByteArrayOutputStream()) {
