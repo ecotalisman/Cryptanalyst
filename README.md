@@ -44,7 +44,7 @@ For example, if we set the offset to 3, then A will be replaced by D, B will bec
 
 This is the minimum amount of theoretical data you will need to complete the final project. Let's move on to describing the task!
 
-You can read the CS50 lecture.
+You can read the [CS50 lecture](https://javarush.com/quests/lectures/questharvardcs50.level02.lecture07).
 
 ## Final Project for the Java Syntax Module: Writing a Cryptoanalyzer
 Task: Write a program that works with Caesar's cipher.
@@ -127,7 +127,7 @@ The project is checked during its passage by a group.
 
 Це мінімум теоретичних відомостей, які вам знадобляться для виконання підсумкового проєкту. Переходимо до опису завдання!
 
-Ви можете прочитати лекцію CS50.
+Ви можете прочитати [лекцію CS50](https://javarush.com/quests/lectures/questharvardcs50.level02.lecture07).
 
 ## Підсумковий проєкт до модуля Java Syntax: Пишемо криптоаналізатор
 Завдання: написати програму, що працює з шифром Цезаря.
