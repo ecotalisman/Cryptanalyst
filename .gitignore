@@ -48,3 +48,6 @@ out/
 /out.log
 /out.log.*
 /sonarlint/
+/src/app/files/
+/src/app/filesDecrypt/
+/src/app/filesEncrypt/
