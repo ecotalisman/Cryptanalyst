@@ -1,6 +1,6 @@
 # Cryptanalyst
 
-# Module 1 Final Project Task
+# Module 1 Final Project Task JavaRush University
 
 **Module 1. Java Syntax**  
 **Level 28, Lecture 1**
@@ -83,7 +83,7 @@ The project is checked during its passage by a group.
 ### 🇺🇦 Ukrainian version:
 ---
 
-# Завдання на підсумковий проєкт модуля 1
+# Завдання на підсумковий проєкт модуля 1 JavaRush University
 
 **Модуль 1. Java Syntax**  
 **Рівень 28, Лекція 1**
